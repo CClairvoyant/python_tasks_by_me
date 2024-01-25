@@ -1,0 +1,10 @@
+.idea
+aoc
+books/*
+!books/README.md
+cars_v2/*
+!cars_v2/README.md
+decorators/*
+!decorators/README.md
+random
+

@@ -1,0 +1,16 @@
+Fail Gitis: EX/ex10_oop/cars.py
+
+Klass Car
+
+__init__(self, mark: str, model: str, mileage: int, fuel_tank_size: int, fuel: float, fuel_consumption: float)
+Konstruktor, mis loob objekti vastavalt klassi nõuetele. Igal autol on sellised väärtused: mark: str, model: str, mileage: int, fuel_tank_size: int, fuel: float, fuel_consumption: float. Konstruktor on juba valmis tehtud ning seda ei pea muutma. Julgustatud on aga soovi korral enda väärtuste lisamine.
+
+Funktsioonid:
+
+drive(self, distance: int) -> str:
+
+Proovib sõita etteantud vahemaa ning tagastab sõne mis vastab sõitmise tulemusele. Sõned on välja toodud mallis.
+
+refuel(self, liters: int):
+
+Tangib auto.

@@ -1,0 +1,64 @@
+Klass WeaponType(Enum)
+
+Kindlasti ei tohi kirjas olevaid väärtusi muuta. On välja toodud kasutatavad relvad, nende hind, palju kahju üks laskemoon teeb teisele tegelasele, ühe salvetäie laskemoona hind ning salve suurus.
+
+
+
+Klass JobType(Enum)
+
+Samuti ei tohi kirjas olevaid väärtusi siin muuta. Siin on välja toodud kolm töö liiki, mida teha saab earn_money meetodis.
+
+
+
+Klass Gender(Enum)
+
+Määrab tegelase soo.
+
+
+
+DeadPlayerException(Exception)
+
+Kohandatud erind mis kutsutakse esile siis, kui üritatakse teatud operatsioone teha surnud tegelasega.
+
+
+
+Klass Weapon
+
+__init__(self, weapon_type: WeaponType)
+Konstruktor, mis loob Weapon objekti. Kaasa peab andma relva tüübi.
+
+reload(self)
+Laeb relva, kui moona on ostetud.
+
+
+
+Klass GTACharacter
+
+__init__(self, name: str, gender: Gender, initial_health: int, armor: int, weapons: list[Weapon], money: int)
+Konstruktor, mis loob GTA tegelase.
+
+health, armor ning money omandid (property) ning nende väärtuste seadjad. Nende määramisel tuleb mitu kontrolli teha (mallis rohkem kirjas).
+
+get_weapon(self, weapon_type: WeaponType) -> Weapon | None
+Otsib tegelaselt vastavat tüüpi relva ning tagastab selle, kui leiab, kui mitte, siis tagastab None.
+
+buy_weapon(self, weapon_type: WeaponType) -> Weapon | None
+Ostab weapon_type tüüpi relva kui raha jätkub ning antud tüüpi relva tal juba olemas pole.
+
+buy_ammo(self, weapon: Weapon) -> bool
+ostab laskemoona kindlale relvale.
+
+buy_armor(self)
+Ostab kuulivesti endale
+
+buy_health(self)
+Ostab elupunkte juurde.
+
+earn_money(self, job_type: JobType) -> int
+Tegelane saab selle meetodiga raha teenida.
+
+
+
+shoot(shooter: GTACharacter, target: GTACharacter, weapon: Weapon, times: int = None) -> bool
+Funktsioon, millega saab üks tegelane teist tulistada. Tagastab kas tulistamine toimus või mitte.
+
